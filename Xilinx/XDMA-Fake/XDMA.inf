@@ -1,0 +1,199 @@
+;-- (c) Copyright 2019 Xilinx, Inc. All rights reserved.
+;--
+;-- This file contains confidential and proprietary information
+;-- of Xilinx, Inc. and is protected under U.S. and
+;-- international copyright and other intellectual property
+;-- laws.
+;--
+;-- DISCLAIMER
+;-- This disclaimer is not a license and does not grant any
+;-- rights to the materials distributed herewith. Except as
+;-- otherwise provided in a Valid license issued to you by
+;-- Xilinx, and to the maximum extent permitted by applicable
+;-- law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+;-- WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+;-- AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+;-- BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+;-- INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+;-- (2) Xilinx shall not be liable (whether in contract or tort,
+;-- including negligence, or under any other theory of
+;-- liability) for any loss or damage of any kind or nature
+;-- related to, arising under or in connection with these
+;-- materials, including for any direct, or any indirect,
+;-- special, incidental, or consequential loss or damage
+;-- (including loss of Data, profits, goodwill, or any type of
+;-- loss or damage suffered as a result of any action brought
+;-- by a third party) even if such damage or loss was
+;-- reasonably foreseeable or Xilinx had been advised of the
+;-- possibility of the same.
+;--
+;-- CRITICAL APPLICATIONS
+;-- Xilinx products are not designed or intended to be fail-
+;-- safe, or for use in any application requiring fail-safe
+;-- performance, such as life-support or safety devices or
+;-- systems, Class III medical devices, nuclear facilities,
+;-- applications related to the deployment of airbags, or any
+;-- other applications that could lead to death, personal
+;-- injury, or severe property or environmental damage
+;-- (individually and collectively, "Critical
+;-- Applications"). Customer assumes the sole risk and
+;-- liability of any use of Xilinx products in Critical
+;-- Applications, subject only to applicable laws and
+;-- regulations governing limitations on product liability.
+;--
+;-- THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+;-- PART OF THIS FILE AT ALL TIMES.
+;-------------------------------------------------------------------------------
+;--
+;-- Vendor         : Xilinx
+;-- Revision       : $Revision: #5 $
+;-- Date           : $DateTime: 2019/05/06 02:06:58 $
+;-- Last Author    : $Author: arayajig $
+;--
+;-------------------------------------------------------------------------------
+;-- Description :
+;-- This file is part of the Xilinx DMA IP Core driver for Windows.
+;--
+;-------------------------------------------------------------------------------
+
+[Version]
+CatalogFile               = XDMA.cat
+Class                     = %ClassName% ;TODO use a different class - maybe "Memory Technology device" or "MultiFunction device"
+ClassGuid                 = {a3a4c1ce-5a80-452c-9b51-a98edd3378d1}
+DriverPackageDisplayName  = %XDMA.DRVDESC%
+DriverPackageType         = PlugAndPlay
+DriverVer = 07/10/2019,9.28.2.510
+Provider                  = %Companyname%
+Signature                 = "$WINDOWS NT$"
+
+[DestinationDirs]
+DefaultDestDir  = 12
+CoInstaller_CopyFiles = 11
+
+; ====================== Class Section ========================================
+[ClassInstall32]
+Addreg		= XDMA.ClassReg
+
+[XDMA.ClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+HKR,,DeviceCharacteristics,0x10001,0x100     ;Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GRGW;;;WD)" ;Allow generic all access to system, built-in Admin and World
+
+; ====================== Device Install Section ===============================
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%Companyname%=Xilinx,NTamd64
+
+[SourceDisksFiles]
+XDMA.sys    = 1
+;
+
+
+[SourceDisksNames]
+1="XDMA Install Disk",
+
+; For XP and later
+[Xilinx.NTamd64]
+; DisplayName           Section			DeviceId
+; -----------           -------			--------
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9011
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9012
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9014
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9018
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9021
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9022
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9024
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9028
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9031
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9032
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9034
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_9038
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_903f
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8011
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8012
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8014
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8018
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8021
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8022
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8024
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8028
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8031
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8032
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8034
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_8038
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7011
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7012
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7014
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7018
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7021
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7022
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7024
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7028
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7031
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7032
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7034
+%XDMA.DRVDESC%=			XDMA_Inst,		PCI\VEN_10ee&DEV_7038
+
+[XDMA_Inst.NT]
+CopyFiles   =	XDMA.CopyFiles
+
+[XDMA.CopyFiles]
+XDMA.sys
+
+; MSI/MSI-X support
+[XDMA_Inst.NT.HW]
+AddReg = XDMA.EnableMSI
+
+; 24 Interrupt resources are required - 16 for user events and 8 for dma channels
+[XDMA.EnableMSI]
+HKR,"Interrupt Management",,0x00000010
+HKR,"Interrupt Management\MessageSignaledInterruptProperties",,0x00000010
+HKR,"Interrupt Management\MessageSignaledInterruptProperties",MSISupported,0x00010001,1
+HKR,"Interrupt Management\MessageSignaledInterruptProperties",MessageNumberLimit,0x00010001,32
+
+
+[XDMA_Inst.NT.Services]
+AddService     = XDMA,0x00000002,XDMA_Service
+
+[XDMA_Service]
+DisplayName    = %XDMA.SVCDESC%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\XDMA.sys
+AddReg         = XDMA_Inst.NT.Services.AddReg  ;Commented out for installer use, For debug include in build
+
+[XDMA_Inst.NT.Services.AddReg]
+HKR,Parameters,"POLL_MODE",0x00010001,0 ; set to 1 for hardware polling, default is 0 (interrupts)
+
+
+; ====================== WDF Coinstaller installation =========================
+
+[XDMA_Inst.NT.CoInstallers]
+AddReg         = CoInstaller_AddReg
+CopyFiles      = CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+;
+
+
+[CoInstaller_CopyFiles]
+;
+
+
+[XDMA_Inst.NT.Wdf]
+KmdfService    = XDMA, XDMA_wdfsect
+
+[XDMA_wdfsect]
+KmdfLibraryVersion = 1.15
+
+;======================= String Definitions ===================================
+[Strings]
+Companyname				= "Xilinx"
+ClassName				= "Xilinx Drivers"
+XDMA.SVCDESC			= "Xilinx DMA Driver Service"
+XDMA.DRVDESC			= "Xilinx DMA"
+DeviceDescription		= "Xilinx FPGA device"

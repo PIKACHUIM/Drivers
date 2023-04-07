@@ -1,16 +1,10 @@
-#### CFaDisk - 把SD卡 / 读卡器 / 内存卡识别为本地硬盘
-
-CFaDisk - Identify SD card/ Reader / Memory Card as Local Hard Drive
-
-## 软件说明
-
-**cfadisk.inf驱动**能够**将内置SD卡读卡器变成本地磁盘**，解决一些软件不能安装在SD卡/U盘/移动硬盘等设备上的问题。
+#### Xilinx - 赛灵思
 
 ## 下载地址
 
-### 伪造时间戳（推荐，支持Win10安全启动）：[CFaDisk - 伪造时间CA证书签名驱动](https://github.com/PIKACHUIM/Drivers/raw/main/CFaDisk/Driver-Fake.zip)
+### 伪造时间戳（推荐，支持Win10安全启动）：[Xilinx-XDMA- 伪造时间CA证书签名驱动](https://github.com/PIKACHUIM/Drivers/raw/main/Xilinx/XDMA-Fake.zip)
 
-### 自建CA下载（备用，兼容Win7 XP等系统）：[CFaDisk - 自建系统CA系统签名驱动](https://github.com/PIKACHUIM/Drivers/raw/main/CFaDisk/Drvier-Pika.zip)     
+### 自建CA下载（备用，兼容Win7 XP等系统）：[Xilinx-XDMA- 自建系统CA系统签名驱动](https://github.com/PIKACHUIM/Drivers/raw/main/Xilinx/XDMA-Pika.zip)
 
 选择一个下载就行，两者区别：
 
