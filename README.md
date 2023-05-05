@@ -30,15 +30,15 @@
 
   #### 英伟达魔改矿卡驱动，适合P10X~HX系列矿卡
 
-  > ##### Win10-麦克斯韦尔以上（P106等）：[NVIDIA-GameReady-531.41-Maxwell-Higher-Win10-SHA2](https://file-cn.pika.net.cn/YD1/Sources/Drivers/Nvidia/NVIDIA-GameReady-531.41-Maxwell-Higher-Win10-SHA2-PikaFakerTime.exe)
+  > ##### Win10-麦克斯韦尔以上（P106等）：[NVIDIA-GameReady-531.41-Maxwell-Higher-Win10-SHA2](https://file-cn.52pika.cn/YD1/Sources/Mirrors/PCDriver/NVIDIA/Graphics/NVIDIA-GameReady-531.41-Maxwell-Higher-Win10-SHA2-PikaFakerTime-Certum.rar)
   >
-  > ##### Win10-开普勒老架构等（老显卡）  ：[NVIDIA-GameReady-474.14-Kepler-orLower-Win10-SHA1](https://file-cn.pika.net.cn/YD1/Sources/Drivers/Nvidia/NVIDIA-GameReady-474.14-Kepler-orLower-Win10-SHA1-PikaFakerTime.exe)
+  > ##### Win10-开普勒老架构等（老显卡）  ：[NVIDIA-GameReady-474.14-Kepler-orLower-Win10-SHA1](https://file-cn.52pika.cn/YD1/Sources/Mirrors/PCDriver/NVIDIA/Graphics/NVIDIA-GameReady-474.14-Kepler-orLower-Win10-SHA1-PikaFakerTime-Certum.rar)
   >
-  > ##### Win7/8麦克斯韦尔以上（P106等）：[NVIDIA-GameReady-472.12-Maxwell-Higher-Win78-SHA1](https://file-cn.pika.net.cn/YD1/Sources/Drivers/Nvidia/NVIDIA-GameReady-472.12-Maxwell-Higher-Win78-SHA1-PikaFakerTime.exe)
+  > ##### Win7/8麦克斯韦尔以上（P106等）：[NVIDIA-GameReady-472.12-Maxwell-Higher-Win78-SHA1](https://file-cn.52pika.cn/YD1/Sources/Mirrors/PCDriver/NVIDIA/Graphics/NVIDIA-GameReady-472.12-Maxwell-Higher-Win78-SHA1-PikaFakerTime-Certum.rar)
 
 - ### Intel-Graphic
 
-  > ##### Win7/8-1151平台核显-HD520-630：[Intel-Graphic-Driver-HD520-UHD613-Windows7-8-SHA1](https://file-cn.pika.net.cn/YD1/Sources/Drivers/Intel/Intel-Graphic-Driver-HD520-UHD613-Windows7-8-SHA1-PikaFakerTime.exe)
+  > ##### Win7/8-1151平台核显-HD520-630：[Intel-Graphic-Driver-HD520-UHD613-Windows7-8-SHA1](https://file-cn.52pika.cn/YD1/Sources/Mirrors/PCDriver/Intel/Graphics/Intel-Graphic-Driver-HD520-UHD630-Windows7-8-SHA1-PikaFakerTime-Certum.rar)
 
 ## 使用教程
 
